@@ -26,16 +26,15 @@ const render = function () {
 
         li.querySelector(".todo-remove").addEventListener("click", function () {
             toDoData.splice(index, 1);
-            li.remove();
             render();
-            localStorage.setItem("toDoData", JSON.stringify(toDoData));
-        })
+        });
 
         li.querySelector(".todo-complete").addEventListener("click", function () {
             item.completed = !item.completed;
             render();
-            localStorage.setItem("toDoData", JSON.stringify(toDoData));
-        })
+        });
+
+        localStorage.setItem("toDoData", JSON.stringify(toDoData));
     });
 }
 
@@ -50,7 +49,6 @@ todoControl.addEventListener("submit", function (event) {
     }
 
     toDoData.push(newToDo);
-    localStorage.setItem("toDoData", JSON.stringify(toDoData));
     headerInput.value = "";
 
     render();
