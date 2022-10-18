@@ -7,7 +7,6 @@ const todoControl = document.querySelector(".todo-control");
 const toDoData = JSON.parse(localStorage.getItem('toDoData')) ? JSON.parse(localStorage.getItem('toDoData')) : [];
 
 
-
 const render = function () {
     todoList.innerHTML = "";
     todoCompleted.innerHTML = "";
