@@ -11,7 +11,7 @@ const toDoData = JSON.parse(localStorage.getItem('toDoData')) ? JSON.parse(local
 const render = function () {
     todoList.innerHTML = "";
     todoCompleted.innerHTML = "";
-    toDoData.forEach(function (item) {
+    toDoData.forEach(function (item, index) {
         const li = document.createElement('li');
         li.classList.add("todo-item");
         li.innerHTML = `<span class="text-todo">${item.text}</span>
@@ -26,8 +26,9 @@ const render = function () {
         };
 
         li.querySelector(".todo-remove").addEventListener("click", function () {
-            toDoData.splice(li, 1);
+            toDoData.splice(index, 1);
             li.remove();
+            render();
             localStorage.setItem("toDoData", JSON.stringify(toDoData));
         })
 
