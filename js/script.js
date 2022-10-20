@@ -26,7 +26,6 @@ const render = function () {
 
         li.querySelector(".todo-remove").addEventListener("click", function () {
             toDoData.splice(index, 1);
-            localStorage.setItem("toDoData", JSON.stringify(toDoData));
             render();
         });
 
