@@ -53,5 +53,5 @@ todoControl.addEventListener("submit", function (event) {
 
     render();
 })
-alert (toDoData);
+
 if (toDoData !== []) render();
