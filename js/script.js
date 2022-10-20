@@ -33,9 +33,8 @@ const render = function () {
             item.completed = !item.completed;
             render();
         });
-
-        localStorage.setItem("toDoData", JSON.stringify(toDoData));
     });
+    localStorage.setItem("toDoData", JSON.stringify(toDoData));
 }
 
 todoControl.addEventListener("submit", function (event) {
