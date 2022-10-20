@@ -11,7 +11,6 @@ const render = function () {
     todoList.innerHTML = "";
     todoCompleted.innerHTML = "";
     toDoData.forEach(function (item, index) {
-        alert(item);
         const li = document.createElement('li');
         li.classList.add("todo-item");
         li.innerHTML = `<span class="text-todo">${item.text}</span>
@@ -54,5 +53,5 @@ todoControl.addEventListener("submit", function (event) {
 
     render();
 })
-
+alert (toDoData);
 if (toDoData !== []) render();
